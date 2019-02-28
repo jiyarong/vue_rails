@@ -4,7 +4,7 @@
 #### add webpacker and vue_on_rails to your gemfile
 ```ruby
 gem 'webpacker'
-gem 'vue_on_rails'
+gem 'vue_rails'
 ```
 
 #### run installers
