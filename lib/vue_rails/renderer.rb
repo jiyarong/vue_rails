@@ -1,6 +1,6 @@
-require 'vue_on_rails/asset_finder'
+require 'vue_rails/asset_finder'
 
-module VueOnRails
+module VueRails
   class Renderer
     GLOBAL_WRAPPER = <<-JS
         var global = global || this;
@@ -33,12 +33,12 @@ module VueOnRails
     def render
       if Rails.env.production?
         self.context ||= (
-        js_code = VueOnRails::WebpackerAssetFinder.new.find_asset("vue_server_render.js")
+        js_code = VueRails::WebpackerAssetFinder.new.find_asset("vue_server_render.js")
         ExecJS.compile(GLOBAL_WRAPPER + CONSOLE_POLYFILL + js_code)
         )
       else
         self.context = (
-        js_code = VueOnRails::WebpackerAssetFinder.new.find_asset("vue_server_render.js")
+        js_code = VueRails::WebpackerAssetFinder.new.find_asset("vue_server_render.js")
         ExecJS.compile(GLOBAL_WRAPPER + CONSOLE_POLYFILL + js_code)
         )
       end
@@ -49,7 +49,7 @@ module VueOnRails
     private
 
     def cache_key
-      path = VueOnRails::WebpackerAssetFinder.new.find_path("vue_server_render.js")
+      path = VueRails::WebpackerAssetFinder.new.find_path("vue_server_render.js")
       Digest::MD5.hexdigest("#{component}_#{JSON.parse(props).delete_if {|k, _| k.to_s == "csrf_token"}}_#{router_push_to}_#{path}_#{state}")
     end
   end

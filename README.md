@@ -1,7 +1,7 @@
-# VueOnRails
+# VueRails
 
 ## Get started with Webpacker
-#### add webpacker and vue_on_rails to your gemfile
+#### add webpacker and vue_rails to your gemfile
 ```ruby
 gem 'webpacker'
 gem 'vue_rails'
@@ -276,4 +276,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the VueOnRails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/vue_on_rails/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the VueRails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/vue_rails/blob/master/CODE_OF_CONDUCT.md).

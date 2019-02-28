@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "vue_on_rails/version"
+require "vue_rails/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "vue_rails"
-  spec.version       = VueOnRails::VERSION
+  spec.version       = VueRails::VERSION
   spec.authors       = ["纪亚荣"]
   spec.email         = ["583255925@qq.com"]
 

@@ -1,8 +1,8 @@
 require "test_helper"
 
-class VueOnRailsTest < Minitest::Test
+class VueRailsTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::VueOnRails::VERSION
+    refute_nil ::VueRails::VERSION
   end
 
   def test_it_does_something_useful

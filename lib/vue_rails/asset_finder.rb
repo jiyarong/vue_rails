@@ -1,6 +1,6 @@
 require 'open-uri'
 
-module VueOnRails
+module VueRails
   class WebpackerAssetFinder
     begin
       MAJOR, MINOR, PATCH, _ = Bundler.locked_gems.specs.find { |gem_spec| gem_spec.name == 'webpacker' }.version.segments
