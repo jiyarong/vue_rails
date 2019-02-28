@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Vue integration for Ruby on Rails'
   spec.description   = 'initialize Vue Components in Rails Views and server render'
-  spec.homepage      = "https://foo.com"
+  spec.homepage      = "https://github.com/jiyarong/vue_on_rails"
   spec.license       = "MIT"
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do

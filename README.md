@@ -2,17 +2,17 @@
 
 ## Get started with Webpacker
 #### add webpacker and vue_on_rails to your gemfile
-```
+```ruby
 gem 'webpacker'
 gem 'vue_on_rails'
 ```
 
 #### run installers
-```
+```shell
 $ bundle install
 $ rails webpacker:install
 $ rails webpacker:install:vue
-# rails generate vue:install
+$ rails generate vue:install
 ```
 
 #### confirm your webpacker source_entry path
@@ -31,19 +31,19 @@ $ rails webpacker:install:vue
 ## Basic Usage
 
 **1. add javascript_pack_tag to application.html**
-```
+```ruby
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 ```
 **2. generate a controller and view**
 
 example:
-```
+```shell
 $ rails generate controller home index
 ```
 and don't forget the router config!
 
 **3. add vue_components in your home/index.html**
-```
+```ruby
 <%= vue_component("hello") %>
 ```
 
@@ -59,7 +59,7 @@ multiple components render is also work!
 ## Advanced Usage
 
 ### pass props to your components
-```
+```ruby
 <%= vue_component("hello", {foo: 'bar'}) %>
 ```
 in your component hello.vue:
@@ -83,7 +83,7 @@ in your component hello.vue:
 ```
 
 hash or array is also works
-```
+```ruby
 <%= vue_component("hello", {foo: {name: 'Peter'}}) %>
 ```
 
@@ -106,7 +106,7 @@ hash or array is also works
 </script>
 ```
 
-```
+```ruby
 <%= vue_component("hello", {foo: [1,2,3]}) %>
 ```
 
@@ -143,11 +143,11 @@ with options `prerender`, server side will prerender a dom before vue components
 
 
 ### server side render with vue-router
-```
+```shell
 $ yarn add vue-router
 ```
 in both application.js and vue_server_render.js
-```
+```js
 import VueRouter from 'vue-router';
 
 RailsVueUJS.use(VueRouter);
@@ -156,7 +156,7 @@ RailsVueUJS.use(VueRouter);
 
 and your vue component
 
-```vue
+```html
 <template>
     <div class="container">
       <div class="content">
@@ -219,13 +219,13 @@ in your routes.rb
 ```
 
 ### server side render with vuex
-```
+```shell
 $ yarn add vuex
 ```
 
 initialize a store
 
-```vue
+```js
 import Vue from 'vue'
 import Vuex from 'vuex';
 
@@ -241,7 +241,7 @@ export default store;
 ```
 
 in both application.js and vue_server_render.js
-```
+```js
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import store from "../vue_components/store";
@@ -261,7 +261,7 @@ in your html file
 with option `state`, it will replace your vuex state, for more information see the doc with vuex 
 
 in your component
-```vue
+```html
 ...
 <div v-if="$store.state.hasLogin">
   <a href="/users/logout">logout</a>
