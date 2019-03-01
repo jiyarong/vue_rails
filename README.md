@@ -145,6 +145,8 @@ with options `prerender`, server side will prerender a dom before vue components
 <%= vue_component("hello", {foo: [1,2,3]}, {prerender: true}) %>
 ```
 
+**distinguish ssr and csr ,use props `env_ssr`**
+
 
 ### server side render with vue-router
 ```shell
@@ -164,7 +166,7 @@ and your vue component
 <template>
     <div class="container">
       <div class="content">
-        <router-view :outside="outside"></router-view>
+        <router-view :outside="outside" :env_ssr="env_ssr"></router-view>
       </div>
     </div>
 </template>
@@ -206,7 +208,7 @@ and your vue component
   });
 
   export default {
-    props: ['outside'],
+    props: ['outside', 'env_ssr'],
     router
   };
 </script>
