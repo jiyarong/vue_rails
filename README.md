@@ -60,6 +60,12 @@ multiple components render is also work!
 
 **4. open the browser and check it, it should been works!** 
 
+#### mapping between component path and name
+
+`/vue_components/hello`  ->  `vue_component('hello')`
+`/vue_components/post/index`  ->  `vue_component('post/index')`
+`/vue_components/post/edit/index`  ->  `vue_component('post/edit/index')`
+
 ## Advanced Usage
 
 ### pass props to your components
