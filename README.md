@@ -147,6 +147,27 @@ with options `prerender`, server side will prerender a dom before vue components
 
 **distinguish ssr and csr ,use props `env_ssr`**
 
+**Adjust the order of asset_tags**
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsVueSsr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</html>
+```
+
+**javascript_pack_tag should under the body**
+
 
 ### server side render with vue-router
 ```shell
