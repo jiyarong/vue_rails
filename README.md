@@ -1,5 +1,8 @@
 # VueRails
 
+(example project)[https://github.com/jiyarong/rails_vue_ssr]
+(online demo for server side render)(https://vue.xiayuanyin.cn)
+
 ## Get started with Webpacker
 #### add webpacker and vue_rails to your gemfile
 ```ruby
