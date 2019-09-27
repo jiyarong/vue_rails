@@ -2,7 +2,7 @@
 
 [example project](https://github.com/jiyarong/rails_vue_ssr)
 
-[online demo for server side render](http://vue.xiayuanyin.cn)  (U can sign in with 'admin')
+[online demo for server side render](https://vblog.peterji.cn)  (U can sign in with 'admin')
 
 ## Get started with Webpacker
 #### add webpacker and vue_rails to your gemfile
